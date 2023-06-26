@@ -332,7 +332,11 @@ Git сообщит об этом с помощью статуса *modified*: ф
 ## Типичный жизненный цикл файла в Git
 
 ```mermaid
+<<<<<<< HEAD
 graph LR;
+=======
+graf LR;
+>>>>>>> b8dcaad847ba6d7ecb30ca292a6c6b4bb6d467c3
 untracked -- "git add" --> staged;
 modifield -- "git add" --> staged + tracked;
 staged + tracked -- "изменения" --> modifield;
