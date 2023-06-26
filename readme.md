@@ -326,12 +326,13 @@ Date:   Tue Mar 28 00:26:53 2023 +0300
 
 ## Про staged и modified
 
-Команда git add добавляет в *staging* area только текущее содержимое файла. Если вы, например, сделаете *git add file.txt*, а затем измените *file.txt*, то новое содержимое файла не будет находиться в *staging*.
+Команда *git add* добавляет в *staging* area только текущее содержимое файла. Если вы, например, сделаете *git add file.txt*, а затем измените *file.txt*, то новое содержимое файла не будет находиться в *staging*.
 Git сообщит об этом с помощью статуса *modified*: файл изменён относительно той версии, которая уже в *staging*. Чтобы добавить в *staging* последнюю версию, нужно выполнить *git add file.txt* ещё раз.
 
 ## Типичный жизненный цикл файла в Git
 
-```graf LR
+```mermaid
+graph LR;
 untracked -- "git add" --> staged;
 modifield -- "git add" --> staged + tracked;
 staged + tracked -- "изменения" --> modifield;
